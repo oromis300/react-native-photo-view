@@ -30,6 +30,7 @@ export default class PhotoView extends Component {
         onLoadEnd: PropTypes.func,
         onProgress: PropTypes.func,
         onTap: PropTypes.func,
+        onLongClick: PropTypes.func,
         onViewTap: PropTypes.func,
         onScale: PropTypes.func,
         showsHorizontalScrollIndicator: PropTypes.bool,
@@ -50,7 +51,7 @@ export default class PhotoView extends Component {
         }
 
         if (source && source.uri) {
-            var {onLoadStart, onLoad, onLoadEnd, onProgress, onTap, onViewTap, onScale, onError, ...props} = this.props;
+            var {onLoadStart, onLoad, onLoadEnd, onProgress, onTap, onLongClick, onViewTap, onScale, onError, ...props} = this.props;
 
             var nativeProps = {
                 onPhotoViewerError: onError,
@@ -59,6 +60,7 @@ export default class PhotoView extends Component {
                 onPhotoViewerLoadEnd: onLoadEnd,
                 onPhotoViewerProgress: onProgress,
                 onPhotoViewerTap: onTap,
+                onPhotoViewerLongClick: onLongClick,
                 onPhotoViewerViewTap: onViewTap,
                 onPhotoViewerScale: onScale,
                 ...props,
