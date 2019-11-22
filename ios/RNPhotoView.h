@@ -22,6 +22,7 @@
 @property (nonatomic, copy) RCTDirectEventBlock onPhotoViewerScale;
 @property (nonatomic, copy) RCTBubblingEventBlock onPhotoViewerViewTap;
 @property (nonatomic, copy) RCTBubblingEventBlock onPhotoViewerTap;
+@property (nonatomic, copy) RCTBubblingEventBlock onPhotoViewerLongClick;
 @property (nonatomic, copy) RCTDirectEventBlock onPhotoViewerLoadStart;
 @property (nonatomic, copy) RCTDirectEventBlock onPhotoViewerLoad;
 @property (nonatomic, copy) RCTDirectEventBlock onPhotoViewerLoadEnd;

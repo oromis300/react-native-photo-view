@@ -24,5 +24,6 @@
 - (void)imageView:(UIImageView *)imageView singleTapDetected:(UITouch *)touch;
 - (void)imageView:(UIImageView *)imageView doubleTapDetected:(UITouch *)touch;
 - (void)imageView:(UIImageView *)imageView tripleTapDetected:(UITouch *)touch;
+- (void)imageView:(UIImageView *)imageView longClickDetected:(UITouch *)touch;
 
 @end
