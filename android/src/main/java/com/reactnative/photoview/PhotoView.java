@@ -189,6 +189,18 @@ public class PhotoView extends PhotoDraweeView {
         final EventDispatcher eventDispatcher = ((ReactContext) getContext())
                 .getNativeModule(UIManagerModule.class).getEventDispatcher();
 
+		setOnLongClickListener(new OnLongClickListener() {
+          @Override
+          public boolean onLongClick(View v) {
+            WritableMap scaleChange = Arguments.createMap();
+            scaleChange.putDouble("scale", PhotoView.this.getScale());
+            eventDispatcher.dispatchEvent(
+              new ImageEvent(getId(), ImageEvent.ON_LONG_CLICK).setExtras(scaleChange)
+            );
+            return false;
+          }
+        });
+				
         setOnPhotoTapListener(new OnPhotoTapListener() {
             @Override
             public void onPhotoTap(View view, float x, float y) {
